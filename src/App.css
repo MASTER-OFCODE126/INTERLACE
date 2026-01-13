@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  background-color: #000000;
+}
+
+section {
+  /* min-height: 100vh; */
+  /* border: 2px solid white; */
+  position: relative;
+  /* z-index: 20; */
+}
+
+main {
+  position: relative;
+}
+
+#section-1 nav {
+  /* padding: 200px; */
+  padding: 0 2rem;
+  /* position: relative; */
+}
+
+/* #section-1 nav .nav-element {
+  width: 200px;
+  height: 80px;
+} */
+@font-face {
+  font-family: font1;
+  src: url('/fonts/Gilroy-Bold.woff2') format('woff2');
+
+}
+
+@font-face {
+  font-family: font2;
+  src: url('/fonts/GTSectraDisplay-Bold.woff2') format('woff2');
+
+}
+
+@font-face {
+  font-family: font3;
+  src: url('/fonts/GTSectraDisplay-Regular.woff2') format('woff2');
+
+}
+
+@font-face {
+  font-family: font4;
+  src: url('/fonts/Heebo-Regular.woff2') format('woff2');
+
+}
+
+@font-face {
+  font-family: font5;
+  src: url('/fonts/Heebo-Thin.woff2') format('woff2');
+
+}
+
+#contain {
+  cursor: pointer;
+  color: white;
+  opacity: 0.2;
+  transition: all 0.2s ease-in-out;
+}
+
+#contain:hover {
+  opacity: 1;
+}
+
+#canvas-elem::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url('/background-xl.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s linear;
+}
+main:has(#section-2 #contain:hover) #canvas-elem::after {
+    opacity: 0;
+}
